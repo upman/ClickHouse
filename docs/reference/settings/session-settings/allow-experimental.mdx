@@ -20,7 +20,7 @@ These settings are available in [system.settings](/reference/system-tables/setti
 
 <SettingsInfoBlock type="Bool" default_value="1" />
 
-<VersionHistory rows={[{"id": "row-1","items": [{"label": "26.9"},{"label": "1"},{"label": "The setting is obsolete: the analyzer is mandatory and the old query analysis is no longer supported. Disabling it is refused instead of being ignored, and `compatibility` with a version below 24.3 no longer reverts it."}]}, {"id": "row-2","items": [{"label": "24.3"},{"label": "1"},{"label": "Enable analyzer and planner by default."}]}]}/>
+<VersionHistory rows={[{"id": "row-1","items": [{"label": "26.9"},{"label": "1"},{"label": "The setting is obsolete: the analyzer is mandatory and the old query analysis is no longer supported. Disabling it is refused instead of being ignored, and `compatibility` with a version below 24.3 no longer reverts it."}]}, {"id": "row-2","items": [{"label": "24.8"},{"label": "1"},{"label": "Added the alias `enable_analyzer`."}]}, {"id": "row-3","items": [{"label": "24.3"},{"label": "1"},{"label": "Enable analyzer and planner by default."}]}]}/>
 
 Obsolete since v26.9: the analyzer cannot be disabled anymore.
 
@@ -145,6 +145,8 @@ Allow to create tables with Paimon* table engines.
 **Aliases**: `enable_parallel_replicas`
 
 <SettingsInfoBlock type="UInt64" default_value="0" />
+
+<VersionHistory rows={[{"id": "row-1","items": [{"label": "24.10"},{"label": "0"},{"label": "Parallel replicas with read tasks became the Beta tier feature. The setting is also known by its alias `enable_parallel_replicas`."}]}]}/>
 
 Use up to `max_parallel_replicas` the number of replicas from each shard for SELECT query execution. Reading is parallelized and coordinated dynamically. 0 - disabled, 1 - enabled, silently disable them in case of failure, 2 - enabled, throw an exception in case of failure
 

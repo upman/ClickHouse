@@ -1937,6 +1937,9 @@ It is safe to truncate or drop this table at any time.
 - `CurrentMetric_FreezePartThreads` ([Int64](/reference/data-types/int-uint)) — Number of threads in the threadpool for freezing data parts.
 - `CurrentMetric_FreezePartThreadsActive` ([Int64](/reference/data-types/int-uint)) — Number of active threads in the threadpool for freezing data parts.
 - `CurrentMetric_FreezePartThreadsScheduled` ([Int64](/reference/data-types/int-uint)) — Number of queued or active jobs in the threadpool for freezing data parts.
+- `CurrentMetric_OptimizeFinalThreads` ([Int64](/reference/data-types/int-uint)) — Number of threads in the threadpool that assigns merges of all partitions for OPTIMIZE FINAL.
+- `CurrentMetric_OptimizeFinalThreadsActive` ([Int64](/reference/data-types/int-uint)) — Number of active threads in the threadpool that assigns merges of all partitions for OPTIMIZE FINAL.
+- `CurrentMetric_OptimizeFinalThreadsScheduled` ([Int64](/reference/data-types/int-uint)) — Number of queued or active jobs in the threadpool that assigns merges of all partitions for OPTIMIZE FINAL.
 - `CurrentMetric_PolygonDictionaryThreads` ([Int64](/reference/data-types/int-uint)) — Number of threads in the threadpool for polygon dictionaries.
 - `CurrentMetric_PolygonDictionaryThreadsActive` ([Int64](/reference/data-types/int-uint)) — Number of active threads in the threadpool for polygon dictionaries.
 - `CurrentMetric_PolygonDictionaryThreadsScheduled` ([Int64](/reference/data-types/int-uint)) — Number of queued or active jobs in the threadpool for polygon dictionaries.
